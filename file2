@@ -7,6 +7,8 @@ read salary
 # Check tax conditions and calculate tax
 if [ $salary -le 20000 ]; then
     echo "No tax! Your salary is less than or equal to 20000."
+elif [ $salary -eq 20000 ]; then
+	echo "2% tax is applicable."
 elif [ $salary -gt 20000 ] && [ $salary -le 40000 ]; then
     echo "5% tax is applicable."
 else
