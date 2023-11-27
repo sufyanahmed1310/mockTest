@@ -25,6 +25,14 @@ case $operation in
         result=$((operand1 * operand2))
         echo "Result of multiplication: $result"
         ;;
+    divide)
+        if [ $operand2 -eq 0 ]; then
+            echo "Error: Division by zero is not allowed."
+        else
+            result=$(echo "scale=2; $operand1 / $operand2" | bc)
+            echo "Result of division: $result"
+        fi
+        ;;
     *)
         echo "Error: Invalid operation. Supported operations are add, subtract and  multiply."
         ;;
