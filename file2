@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Prompt user for input
+echo "Enter your salary:"
+read salary
+
+# Check tax conditions and calculate tax
+if [ $salary -le 20000 ]; then
+    echo "No tax! Your salary is less than or equal to 20000."
+elif [ $salary -gt 20000 ] && [ $salary -le 40000 ]; then
+    echo "5% tax is applicable."
+else
+    echo "10% tax is applicable."
+fi
+
