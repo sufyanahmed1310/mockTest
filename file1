@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Prompt user for input
+echo "Enter the first operand:"
+read operand1
+
+echo "Enter the second operand:"
+read operand2
+
+# Prompt user for the operation
+echo "Enter the operation (add, subtract, multiply, divide):"
+read operation
+
+# Perform the specified operation
+case $operation in
+    add)
+        result=$((operand1 + operand2))
+        echo "Result of addition: $result"
+        ;;
+    subtract)
+        result=$((operand1 - operand2))
+        echo "Result of subtraction: $result"
+        ;;
+    multiply)
+        result=$((operand1 * operand2))
+        echo "Result of multiplication: $result"
+        ;;
+    *)
+        echo "Error: Invalid operation. Supported operations are add, subtract and  multiply."
+        ;;
+esac
+
